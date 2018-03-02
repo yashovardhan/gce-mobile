@@ -3,7 +3,7 @@ import { View, ActivityIndicator, Dimensions } from 'react-native';
 import { MapView } from 'expo';
 import { Icon } from 'react-native-elements';
 
-import MapStyle from '../data/MapStyle';
+import MapStyle from '../components/MapStyle';
 
 const markers = require('../data/experts.json');
 const { width, height } = Dimensions.get('window');
@@ -15,7 +15,7 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 class MapScreen extends Component {
   static navigationOptions = {
-    title: 'Experts Map',
+    title: 'Map',
     tabBarIcon: ({ tintColor }) => {
       return <Icon name="person-pin-circle" size={30} color={tintColor} />;
     },
