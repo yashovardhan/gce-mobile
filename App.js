@@ -14,6 +14,7 @@ class App extends Component {
       {
         tabBarPosition: 'bottom',
         swipeEnabled: false,
+        lazy: true,
         tabBarOptions: {
           showLabel: false,
           showIcon: true,
