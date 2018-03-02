@@ -15,7 +15,16 @@ class App extends Component {
         tabBarPosition: 'bottom',
         swipeEnabled: false,
         tabBarOptions: {
-          labelStyle: { fontSize: 10 },
+          showLabel: false,
+          showIcon: true,
+          upperCaseLabel: false,
+          labelStyle: { fontSize: 12 },
+          scrollEnabled: false,
+          activeTintColor: '#D71E3C',
+          inactiveTintColor: 'gray',
+          style: {
+            backgroundColor: 'white',
+          },
         },
       }
     );
