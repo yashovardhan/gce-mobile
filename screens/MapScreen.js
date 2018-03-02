@@ -64,7 +64,7 @@ class MapScreen extends Component {
                 coordinate={marker.pin}
                 title={marker.name}
                 description={marker.city}
-                image={require('../assets/pin.png')}
+                image={require('../data/pin.png')}
               />
             );
           })}
