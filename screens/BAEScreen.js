@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import { View, Platform, Text, Linking } from 'react-native';
-import { Header, Icon } from 'react-native-elements';
+import { Header } from 'react-native-elements';
 
 class BAEScreen extends Component {
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
         <Header
           statusBarProps={{ barStyle: 'light-content' }}
-          leftComponent={
-            <Icon
-              name="keyboard-arrow-left"
-              color="#fff"
-              size={27}
-              onPress={() => {
-                this.props.navigation.goBack();
-              }}
-            />
-          }
+          leftComponent={{
+            icon: 'arrow-back',
+            color: '#fff',
+            fontSize: 27,
+            onPress: () => this.props.navigation.goBack(),
+          }}
           centerComponent={{
             text: 'Become an Expert',
             style: {
