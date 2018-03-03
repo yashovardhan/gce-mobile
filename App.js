@@ -25,7 +25,7 @@ class App extends Component {
                   },
                   {
                     headerMode: 'none',
-                    lazy: true,
+                    lazy: false,
                   }
                 ),
               },
@@ -33,8 +33,8 @@ class App extends Component {
             {
               tabBarPosition: 'bottom',
               swipeEnabled: true,
-              lazy: true,
-              animationEnabled: true,
+              lazy: false,
+              animationEnabled: false,
               initialRouteName: 'expert',
               tabBarOptions: {
                 showLabel: false,
@@ -53,13 +53,10 @@ class App extends Component {
         },
       },
       {
-        navigationOptions: {
-          tabBarVisible: false,
-        },
-        initialRouteName: 'home',
-        animationEnabled: true,
         headerMode: 'none',
-        lazy: true,
+        initialRouteName: 'home',
+        lazy: false,
+        animationEnabled: true,
       }
     );
 
