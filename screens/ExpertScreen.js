@@ -17,6 +17,16 @@ class ExpertScreen extends Component {
       <View style={{ flex: 1 }}>
         <Header
           statusBarProps={{ barStyle: 'light-content' }}
+          leftComponent={
+            <Icon
+              name="keyboard-arrow-left"
+              color="#fff"
+              size={27}
+              onPress={() => {
+                this.props.navigation.navigate('home');
+              }}
+            />
+          }
           centerComponent={{
             text: 'GitHub Campus Experts',
             style: {
