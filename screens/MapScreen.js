@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, ActivityIndicator, Dimensions } from 'react-native';
 import { MapView } from 'expo';
-import { Icon } from 'react-native-elements';
+import { Icon, Text } from 'react-native-elements';
 
 import MapStyle from '../components/MapStyle';
 
@@ -40,6 +40,10 @@ class MapScreen extends Component {
     this.setState({ region });
   };
 
+  onButtonPress(expert) {
+    this.props.navigation.navigate('profile', { expert });
+  }
+
   render() {
     if (!this.state.mapLoaded) {
       return (
@@ -50,7 +54,7 @@ class MapScreen extends Component {
     }
 
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
         <MapView
           region={this.state.region}
           style={{ flex: 1 }}
@@ -64,8 +68,16 @@ class MapScreen extends Component {
                 coordinate={marker.pin}
                 title={marker.name ? marker.name : marker.shortname}
                 description={marker.university + ', ' + marker.city}
-                image={require('../data/pin.png')}
-              />
+                image={require('../data/pin.png')}>
+                <MapView.Callout onPress={() => this.onButtonPress(marker)}>
+                  <View>
+                    <Text style={{ fontSize: 18, fontWeight: '700' }}>
+                      {marker.name ? marker.name : marker.shortname}
+                    </Text>
+                    <Text>{marker.university + ', ' + marker.city}</Text>
+                  </View>
+                </MapView.Callout>
+              </MapView.Marker>
             );
           })}
         </MapView>
