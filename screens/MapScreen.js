@@ -62,8 +62,8 @@ class MapScreen extends Component {
               <MapView.Marker
                 key={marker.github}
                 coordinate={marker.pin}
-                title={marker.name}
-                description={marker.city}
+                title={marker.name ? marker.name : marker.shortname}
+                description={marker.university + ', ' + marker.city}
                 image={require('../data/pin.png')}
               />
             );
