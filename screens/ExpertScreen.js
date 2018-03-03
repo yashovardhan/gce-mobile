@@ -12,21 +12,21 @@ class ExpertScreen extends Component {
     },
   };
 
+  onButtonPress(expert) {
+    this.props.navigation.navigate('profile', { expert });
+  }
+
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
         <Header
           statusBarProps={{ barStyle: 'light-content' }}
-          leftComponent={
-            <Icon
-              name="keyboard-arrow-left"
-              color="#fff"
-              size={27}
-              onPress={() => {
-                this.props.navigation.navigate('home');
-              }}
-            />
-          }
+          leftComponent={{
+            icon: 'arrow-back',
+            color: '#fff',
+            fontSize: 27,
+            onPress: () => this.props.navigation.navigate('home'),
+          }}
           centerComponent={{
             text: 'GitHub Campus Experts',
             style: {
@@ -49,6 +49,7 @@ class ExpertScreen extends Component {
                 key={expert.github}
                 title={expert.name ? expert.name : expert.shortname}
                 subtitle={expert.university}
+                onPress={() => this.onButtonPress(expert)}
               />
             ))}
           </List>
