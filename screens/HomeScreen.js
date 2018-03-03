@@ -7,7 +7,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 class HomeScreen extends Component {
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#D71E3C' }}>
+      <View style={{ flex: 1, backgroundColor: '#D71E3C', justifyContent: 'space-around' }}>
         <Image
           style={{ width: SCREEN_WIDTH }}
           source={require('../data/gce.png')}
