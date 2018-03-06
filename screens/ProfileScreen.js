@@ -27,7 +27,14 @@ class ProfileScreen extends Component {
             icon: 'arrow-back',
             color: '#fff',
             fontSize: 27,
+            reverse: false,
+            underlayColor: '#D71E3C',
             onPress: () => this.props.navigation.goBack(),
+            containerStyle: {
+              paddingTop: 20,
+              paddingLeft: 20,
+              paddingRight: 20,
+            },
           }}
           centerComponent={
             <Text style={{ color: '#fff', fontSize: 18 }}>{this.state.expert.github}</Text>

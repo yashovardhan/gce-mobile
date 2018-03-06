@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { ScrollView, View, Platform } from 'react-native';
 import { Icon, List, ListItem, Header } from 'react-native-elements';
 
-const experts = require('../data/experts.json');
-
 class ExpertScreen extends Component {
   static navigationOptions = {
     title: 'Experts List',
@@ -25,7 +23,14 @@ class ExpertScreen extends Component {
             icon: 'arrow-back',
             color: '#fff',
             fontSize: 27,
+            reverse: false,
+            underlayColor: '#D71E3C',
             onPress: () => this.props.navigation.navigate('home'),
+            containerStyle: {
+              paddingTop: 20,
+              paddingLeft: 20,
+              paddingRight: 20,
+            },
           }}
           centerComponent={{
             text: 'GitHub Campus Experts',
@@ -58,5 +63,7 @@ class ExpertScreen extends Component {
     );
   }
 }
+
+const experts = require('../data/experts.json');
 
 export default ExpertScreen;

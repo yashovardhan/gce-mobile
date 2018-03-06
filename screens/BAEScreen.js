@@ -12,7 +12,14 @@ class BAEScreen extends Component {
             icon: 'arrow-back',
             color: '#fff',
             fontSize: 27,
+            underlayColor: '#D71E3C',
+            reverse: false,
             onPress: () => this.props.navigation.goBack(),
+            containerStyle: {
+              paddingTop: 20,
+              paddingLeft: 20,
+              paddingRight: 20,
+            },
           }}
           centerComponent={{
             text: 'Become an Expert',
