@@ -75,7 +75,7 @@ const styles = {
     marginRight: 15,
     marginBottom: 8,
     fontSize: 17,
-    fontWeight: '500',
+    fontWeight: '200',
     textAlign: 'center',
   },
 };
